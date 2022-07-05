@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'MasterConnect_macMini'
-    }
+    agent any
 
     stages {
         stage('features export') {
