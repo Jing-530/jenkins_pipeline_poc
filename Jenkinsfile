@@ -18,12 +18,10 @@ pipeline {
             steps {
                 echo 'result import...'
                 script {
-                    sh_script_path = "${WORKSPACE}/"
-                    sh
-                    '''
-                        sh_script_path\\test.sh
-                    '''
+                    def curl_cmd = """curl -u jing.liang_1@signify.com:${Password} -H "Content-Type: application/json" -X GET "https://www.tracker.dtf.lighting.com/rest/raven/2.0/export/test?keys=MSI-1118&fz=true" -o features.zip"""
+                    sh "${curl_cmd}"
                 }
+
 
             }
         }
