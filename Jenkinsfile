@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('features export') {
             steps {
-                echo "Test Plan is: ${Test_Plan_Key}"
+                echo "Test Plan is: "
             }
         }
         stage('test') {
