@@ -14,7 +14,7 @@ pipeline {
                 echo 'test'
             }
         }
-        stage('result import') {
+        stage('result import.') {
             steps {
                 echo 'result import...'
                 script {
