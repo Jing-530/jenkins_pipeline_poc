@@ -20,8 +20,8 @@ pipeline {
                     println(curl_cmd)
                     bat "${curl_cmd}"
                 }
-
-
+                echo "${WORKSPACE}/features"
+                sh "unzip -o ${WORKSPACE}/features.zip -d features"
             }
         }
     }
